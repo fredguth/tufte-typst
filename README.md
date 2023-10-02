@@ -11,4 +11,5 @@ typst watch example/main.typ --root .
 
 
 ## Example
-![](./example/main.pdf)
+
+![example/main.pdf](./example/main.pdf)
