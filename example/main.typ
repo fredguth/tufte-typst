@@ -1,6 +1,6 @@
 #import "../tufte_handout_template.typ": template, sidenote
 
-#import "@preview/tablex:0.0.5": tablex, rowspanx, colspanx, hlinex
+#import "@preview/tablex:0.0.9": tablex, rowspanx, colspanx, hlinex
 #let tbl_1 = text(size: 9pt, weight: "thin", tablex(
       columns: (1fr, 2fr, 2fr),
       rows: auto,

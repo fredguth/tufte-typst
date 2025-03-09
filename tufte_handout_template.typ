@@ -21,13 +21,14 @@
     set page(
       paper: "a4",
       margin: (y:9em, left: 5em, right: 23em),
-      header: locate(loc => {
-      if(loc.page() != 1) {
-        set text(font: "EtBb", weight: "semibold", size: 8pt, tracking: 1.1pt, number-type: "old-style", number-width: "tabular")
-        place(right, dy: 8em, dx: 25em)[#upper(title) #h(1em) #text(size:12pt, counter(page).display()
-        )]
+      header: context {
+        if(here().page() !=1) {
+          set text(font: "EtBembo", weight: "semibold", size: 8pt, tracking: 1.1pt, number-type: "old-style", number-width: "tabular")
+          place(right, dy: 8em, dx: 25em)[#upper(title) #h(1em) #text(size:12pt, counter(page).display()
+          )]
+        }
       }
-      }),
+      
     )
 
     // Paper identification (title, author, date)
@@ -57,9 +58,9 @@
     )
     // Configure headings.
   set heading(numbering: none, )
-  show heading: it => locate(loc => {
+  show heading: it => context{
     // Find out the final number of the heading counter.
-    let levels = counter(heading).at(loc)
+    let levels = counter(heading).get()
     set text(16pt, weight: 400)
     if it.level == 1 [
       // We don't want to number of the acknowledgment section.
@@ -95,10 +96,10 @@
       }
       _#(it.body):_
     ]
-  })
+  }
 
 
 
-    set text(font: "EtBb", weight: "regular", size: 11pt, tracking: 0pt, number-type: "old-style", number-width: "tabular")
+    set text(font: "EtBembo", weight: "regular", size: 11pt, tracking: 0pt, number-type: "old-style", number-width: "tabular")
     doc
 }
