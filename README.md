@@ -12,4 +12,8 @@ typst watch example/main.typ --root .
 
 ## Example
 
-![example/main.pdf](./example/main.pdf)
+[Example PDF](https://github.com/fredguth/tufte-typst/blob/main/example/main.pdf)
+
+
+
+
